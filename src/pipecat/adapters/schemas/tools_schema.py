@@ -20,8 +20,7 @@ class ToolsSchema:
         standard_tools: List[FunctionSchema],
         custom_tools: Optional[Dict[AdapterType, List[Dict[str, Any]]]] = None,
     ) -> None:
-        """
-        A schema for tools that includes both standardized function schemas
+        """A schema for tools that includes both standardized function schemas
         and custom tools that do not follow the FunctionSchema format.
 
         :param standard_tools: List of tools following FunctionSchema.

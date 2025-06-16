@@ -107,7 +107,6 @@ async def run_bot(
         params: FunctionCallParams,
     ):
         """Function the bot can call to terminate the call."""
-
         await params.llm.queue_frame(EndTaskFrame(), FrameDirection.UPSTREAM)
 
     tools = [

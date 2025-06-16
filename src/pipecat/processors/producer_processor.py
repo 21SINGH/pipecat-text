@@ -37,8 +37,7 @@ class ProducerProcessor(FrameProcessor):
         self._consumers: List[asyncio.Queue] = []
 
     def add_consumer(self):
-        """
-        Adds a new consumer and returns its associated queue.
+        """Adds a new consumer and returns its associated queue.
 
         Returns:
             asyncio.Queue: The queue for the newly added consumer.
@@ -48,8 +47,7 @@ class ProducerProcessor(FrameProcessor):
         return queue
 
     async def process_frame(self, frame: Frame, direction: FrameDirection):
-        """
-        Processes an incoming frame and determines whether to produce it as a ProducerItem.
+        """Processes an incoming frame and determines whether to produce it as a ProducerItem.
 
         If the frame meets the produce criteria, it will be added to the consumer queues.
         If passthrough is enabled, the frame will also be sent to consumers.

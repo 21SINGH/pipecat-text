@@ -16,7 +16,6 @@ class GeminiLLMAdapter(BaseLLMAdapter):
 
         :return: Gemini formatted function call definition.
         """
-
         functions_schema = tools_schema.standard_tools
         formatted_standard_tools = [
             {"function_declarations": [func.to_default_dict() for func in functions_schema]}

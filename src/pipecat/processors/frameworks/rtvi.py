@@ -397,8 +397,7 @@ class RTVIServerMessageFrame(SystemFrame):
 
 @dataclass
 class RTVIObserverParams:
-    """
-    Parameters for configuring RTVI Observer behavior.
+    """Parameters for configuring RTVI Observer behavior.
 
     Attributes:
         bot_llm_enabled (bool): Indicates if the bot's LLM messages should be sent.

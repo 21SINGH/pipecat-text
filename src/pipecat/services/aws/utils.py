@@ -190,8 +190,7 @@ def get_headers(header_name: str, header_value: str) -> bytearray:
 
 
 def build_event_message(payload: bytes) -> bytes:
-    """
-    Build an event message for AWS Transcribe streaming.
+    """Build an event message for AWS Transcribe streaming.
     Matches AWS sample: https://github.com/aws-samples/amazon-transcribe-streaming-python-websockets/blob/main/eventstream.py
     """
     # Build headers

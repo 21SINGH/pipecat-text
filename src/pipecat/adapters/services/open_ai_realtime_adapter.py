@@ -29,6 +29,5 @@ class OpenAIRealtimeLLMAdapter(BaseLLMAdapter):
 
         :return: Openai Realtime formatted function call definition.
         """
-
         functions_schema = tools_schema.standard_tools
         return [self._to_openai_realtime_function_format(func) for func in functions_schema]
