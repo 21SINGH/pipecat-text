@@ -35,15 +35,12 @@ from pipecat.transports.services.daily import (
 
 
 class TavusApi:
-    """
-    A helper class for interacting with the Tavus API (v2).
-    """
+    """A helper class for interacting with the Tavus API (v2)."""
 
     BASE_URL = "https://tavusapi.com/v2"
 
     def __init__(self, api_key: str, session: aiohttp.ClientSession):
-        """
-        Initialize the TavusApi client.
+        """Initialize the TavusApi client.
 
         Args:
             api_key (str): Tavus API key.
@@ -105,8 +102,7 @@ class TavusParams(DailyParams):
 
 
 class TavusTransportClient:
-    """
-    A transport client that integrates a Pipecat Bot with the Tavus platform by managing
+    """A transport client that integrates a Pipecat Bot with the Tavus platform by managing
     conversation sessions using the Tavus API.
 
     This client uses `TavusApi` to interact with the Tavus backend services. When a conversation
@@ -460,8 +456,7 @@ class TavusOutputTransport(BaseOutputTransport):
 
 
 class TavusTransport(BaseTransport):
-    """
-    Transport implementation for Tavus video calls.
+    """Transport implementation for Tavus video calls.
 
     When used, the Pipecat bot joins the same virtual room as the Tavus Avatar and the user.
     This is achieved by using `TavusTransportClient`, which initiates the conversation via

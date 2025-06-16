@@ -46,13 +46,13 @@ class MCPClient(BaseObject):
         self, tool_name: str, tool_schema: Dict[str, Any]
     ) -> FunctionSchema:
         """Convert an mcp tool schema to Pipecat's FunctionSchema format.
+
         Args:
             tool_name: The name of the tool
             tool_schema: The mcp tool schema
         Returns:
             A FunctionSchema instance
         """
-
         logger.debug(f"Converting schema for tool '{tool_name}'")
         logger.trace(f"Original schema: {json.dumps(tool_schema, indent=2)}")
 
@@ -72,6 +72,7 @@ class MCPClient(BaseObject):
 
     async def _sse_register_tools(self, llm) -> ToolsSchema:
         """Register all available mcp.run tools with the LLM service.
+
         Args:
             llm: The Pipecat LLM service to register tools with
         Returns:
@@ -111,6 +112,7 @@ class MCPClient(BaseObject):
 
     async def _stdio_register_tools(self, llm) -> ToolsSchema:
         """Register all available mcp.run tools with the LLM service.
+
         Args:
             llm: The Pipecat LLM service to register tools with
         Returns:

@@ -35,6 +35,5 @@ class AWSNovaSonicLLMAdapter(BaseLLMAdapter):
 
         :return: AWS Nova Sonic formatted function call definition.
         """
-
         functions_schema = tools_schema.standard_tools
         return [self._to_aws_nova_sonic_function_format(func) for func in functions_schema]

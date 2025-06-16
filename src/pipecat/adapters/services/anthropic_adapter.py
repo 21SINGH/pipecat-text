@@ -29,6 +29,5 @@ class AnthropicLLMAdapter(BaseLLMAdapter):
 
         :return: Anthropic formatted function call definition.
         """
-
         functions_schema = tools_schema.standard_tools
         return [self._to_anthropic_function_format(func) for func in functions_schema]

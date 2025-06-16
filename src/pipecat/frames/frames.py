@@ -667,7 +667,8 @@ class FunctionCallFromLLM:
 @dataclass
 class FunctionCallsStartedFrame(SystemFrame):
     """A frame signaling that one or more function call execution is going to
-    start."""
+    start.
+    """
 
     function_calls: Sequence[FunctionCallFromLLM]
 

@@ -33,6 +33,5 @@ class AWSBedrockLLMAdapter(BaseLLMAdapter):
 
         :return: Bedrock formatted function call definition.
         """
-
         functions_schema = tools_schema.standard_tools
         return [self._to_bedrock_function_format(func) for func in functions_schema]

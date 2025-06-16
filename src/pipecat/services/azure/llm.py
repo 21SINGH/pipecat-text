@@ -41,6 +41,7 @@ class AzureLLMService(OpenAILLMService):
 
     def create_client(self, api_key=None, base_url=None, **kwargs):
         """Create OpenAI-compatible client for Azure OpenAI endpoint."""
+        logger.debug("testing Azure OpenAI client creation")
         logger.debug(f"Creating Azure OpenAI client with endpoint {self._endpoint}")
         return AsyncAzureOpenAI(
             api_key=api_key,

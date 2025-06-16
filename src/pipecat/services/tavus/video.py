@@ -34,8 +34,7 @@ BOT_VAD_STOP_SECS = 0.35
 
 
 class TavusVideoService(AIService):
-    """
-    Service class that proxies audio to Tavus and receives both audio and video in return.
+    """Service class that proxies audio to Tavus and receives both audio and video in return.
 
     It uses the `TavusTransportClient` to manage the session and handle communication. When
     audio is sent, Tavus responds with both audio and video streams, which are then routed
